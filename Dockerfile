@@ -9,7 +9,7 @@ COPY . .
 RUN go build -o helloworld
 
 # Use a minimal image to run the binary
-FROM gcr.io/distroless/base-debian10
+FROM debian:bullseye-slim
 
 # Copy the binary to the production image from the builder stage.
 COPY --from=builder /app/helloworld /helloworld

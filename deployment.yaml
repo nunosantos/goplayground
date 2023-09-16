@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: helloworld-go-app
-        image: nunosantos251/helloworld-go-app:1.0
+        image: nunosantos251/helloworld-go-app:1.1
         ports:
         - containerPort: 8080
