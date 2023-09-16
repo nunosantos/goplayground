@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: helloworld-go-app
-        image: nunosantos251/helloworld-go-app:1.1
+        image: nunosantos251/helloworld-go-app:1.2
         resources:
           requests:
             memory: "100Mi"
