@@ -1,19 +1,15 @@
 package main
 
-func handle() {
-	
+import (
+	"fmt"
+	"net/http"
+)
+
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello World!")
 }
 
 func main() {
-
+	http.HandleFunc("/", helloHandler)
+	http.ListenAndServe(":8081", nil)
 }
-
-/*
-func main() {
-	var username = "Nuno"
-	const numberOfTickets = 50
-	var remainingTickets = 30
-	fmt.Printf("Hello %v and welcome to the booking system\n", username)
-	fmt.Printf("You can buy a number of %v tickets and ticket remaining are %v.\n", numberOfTickets, remainingTickets)
-}
-*/
