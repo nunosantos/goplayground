@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: hello-world-go
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: hello-world-go
@@ -13,7 +13,7 @@ spec:
         app: hello-world-go
     spec:
       containers:
-      - name: hello-world-go
+      - name: helloworld-go-app
         image: nunosantos251/helloworld-go-app:1.0
         ports:
         - containerPort: 8080
